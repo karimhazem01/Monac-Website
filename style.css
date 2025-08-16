@@ -1,0 +1,983 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+ 
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+:root {
+    --primary-color: #fdbf50;
+    --secondary-color: rgb(27, 27, 27);
+    --primarycontrast-color: #000;
+}
+
+.nav_header {
+    background-color: var(--primary-color);
+    /* background-color: #fdbf50; */
+    padding: 40px 60px;
+
+ 
+}
+/* =======================================NavBar Styling ===================================*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; */
+
+}
+
+/* Nav Links */
+
+.Nav_Links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.Nav_Links ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000;
+    font-size: 16px;
+}
+
+/* Nav Logo */
+
+.Nav_Logo img {
+    width: 100px;
+}
+
+/* Nav buttons */
+.Registeration_btns {
+    display: flex;
+    gap: 20px;
+}
+
+.Registeration_btns button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    
+}
+
+.Registeration_btns button a {
+    text-decoration: none;
+    color: white;
+}
+
+.Registeration_btns button:hover {
+    background-color: black;
+    color: white;
+}
+.Registeration_btns button a:hover {
+    color: white;
+}
+
+
+
+
+/* Nav Responsivness */
+
+@media only screen and (min-width: 562px) and (max-width:681px) {
+.Nav_Links ul li a {
+    font-size: 12px;
+}
+
+.Nav_Logo img {
+    width: 50px;
+}
+
+.Registeration_btns {
+    gap: 2px;
+}
+
+
+}
+
+/* @media only screen and  (max-width:561px) {
+    .nav_header {
+        padding: 60px 20px;
+    }
+    
+    .Registeration_btns {
+        gap: 5px;
+    }
+    .Registeration_btns a {
+    font-size:12px;
+}
+} */
+
+/*  */
+
+
+@media (max-width: 600px) {
+    nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: var(--primary-color);
+    gap: 0;
+    max-height: 0;            /* hidden by default */
+    overflow: hidden;         /* prevent content overflow */
+    transition: max-height 0.5s ease;  /* smooth slide */
+}
+
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
+
+@media only screen and (max-width:560px) {
+    .Nav_Logo img {
+        width: 50px;
+    }
+
+    .Registeration_btns button {
+        padding: 5px 10px;
+    }
+}
+
+@media (min-width: 600px) {
+    .menu-icon{
+        display: none;
+    }
+}
+/*========================================= Header Styling ===================================== */
+header {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+/* Main Content */
+.main_content {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 80px; */
+   
+    
+} 
+
+/* Left Content */
+
+.left_content h1 {
+    max-width: 400px;
+    /* line-height: 1.3; */
+    font-size: 50px;
+}
+
+
+.line1,
+.line2 {
+    display: block;
+    white-space: nowrap;
+}
+
+.left_content .highlighted {
+  display: inline-block;
+  background-color: #1c1c1c;
+  color: var(--primary-color);
+  font-style: italic;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* Right Content */
+
+.right_content p {
+    max-width: 450px;
+    word-break: bread-word;
+    font-size: 14px;
+    color: #85682c;
+    margin-bottom: 20px;
+    /* line-height: 1.3; */
+}
+
+.right_content button {
+    
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #315275;
+    border: 1px solid green;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.right_content button  {
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.right_content button::after {
+    content: '↗';
+    position: absolute;
+    opacity: 0;  
+    top: 9px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.right_content button:hover {
+    padding-right: 24px;
+    padding-left:8px;
+}
+
+.right_content button:hover::after {
+    opacity: 1;
+    right: 10px;
+}
+
+/* Header Image */
+
+.header_img img {
+    width: 50%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    /* height: 50%; */
+}
+
+/* Header Responsivness */
+
+@media only screen and (min-width:455px) and (max-width:778) {
+    header .left_content h1 {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:788px) {
+    .right_content {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .left_content h1 span {
+        font-size: 42px;
+    }
+
+    .header_img img {
+        width:76% ;
+    }
+   
+}
+
+@media only screen and (min-width:1440px) {
+    .right_content p {
+        font-size: 20px;
+    }
+
+    .right_content button {
+        width: 200px;
+        font-size: 20px;
+    }
+
+
+}
+
+
+
+/* Rating Div Styling */
+
+.stats_div {
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.stat {
+    width: 200px;
+    margin: 10px;
+}
+.bordered {
+
+    border-right: 1px solid var(--primary-color);
+}
+
+@media only screen and (max-width:559px) {
+
+    .stat {
+        padding-bottom: 10px;
+    }
+    .bordered {
+        border-right:none;
+        border-bottom: 1px solid var(--primary-color);
+    }
+}
+
+/* ========================================= Smart Education Section Styling =========================================  */
+
+.smart_education {
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FDF6E4;
+    
+}
+
+/* .left_education_content img {
+    
+} */
+
+.right_education_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.right_education_content h1 {
+    font-size: 50px;
+    max-width: 320px;
+    word-break: break-word;
+}
+.right_education_content p {
+    max-width: 330px;
+    word-break: break-word;
+}
+
+.spotted{ 
+  display: inline-block;
+  background-color: var(--primary-color);
+  border: 1px solid black;
+  color: black;
+  font-style: italic;
+  padding: 0px 5px;
+  border-radius: 500px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* Smart Education Responsivness */
+
+@media only screen and (max-width: 768px) {
+.smart_education {
+    flex-direction: column;
+}
+
+ .left_education_content img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+ }
+
+ .right_education_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: left; */
+ }
+
+ .right_education_content h1 {
+    font-size: 30px;
+    
+    
+ }
+}
+
+
+/* ========================================= Features Section Styling =========================================  */
+
+.Features {
+    padding: 60px 40px;
+    background-color: #FDF4EB;
+}
+
+.features_container {
+    /* display: grid;
+    grid-template-columns: 400px 300px 100px;
+    max-width: 1200px;
+    margin: auto; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* width: 100%; */
+    gap: 20px;
+    margin: auto;
+
+}
+
+.left_features_contianer {
+
+    flex-grow: 2;
+    flex-basis: 50%;
+    background-color: #000;
+    color: white;
+    padding: 40px 30px;
+    border-radius: 19px;
+    height: 100%;
+    width: 100%;
+}
+
+.left_features_contianer h1 {
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+.left_features_contianer .F_highlight {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+
+.left_features_contianer button {
+    margin-top: 35px;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: black;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.left_features_contianer button  {
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.left_features_contianeron::after {
+    content: '↗';
+    position: absolute;
+    opacity: 0;  
+    top: 9px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.left_features_contianer button:hover {
+    padding-right: 24px;
+    padding-left:8px;
+}
+
+.left_features_contianer button:hover::after {
+    opacity: 1;
+    right: 10px;
+}
+
+ /* .small_contianers_features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+     
+
+}  */
+
+.small_container {
+    min-width: 250px;
+    /* margin: 30px; */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.small_container p {
+    font-size: smaller;
+}
+
+@media only screen and (max-width: 693px) {
+
+    .small_container {
+        margin: 25px;
+    }
+}
+
+
+/* ========================================= Courses Section Styling ========================================= */
+
+.Coarses_Section {
+    background-color: #000;
+    padding: 60px 40px;
+  
+}
+
+.Courses_title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Courses_title h1 {
+    font-size: 30px;
+    color: white;
+    
+}
+.Courses_title span {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0px 5px;
+    border-radius: 500px;
+    font-weight: 2;
+    margin-right: 8px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+}
+
+.courses_contianer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.course_container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.course_container:hover {
+  transform: translateY(-8px);
+}
+.course_container img {
+    width: 100%;
+}
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.rating_courses {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+.rating_courses i {
+    color: yellow;
+}
+
+.rating_courses p span {
+    color: #C1C1C1;
+}
+
+.time {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+i.fa-solid.fa-clock {   
+    
+    font-weight: 10;
+} 
+
+
+
+
+.course_container h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.course_container button {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid black;
+
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  color: black; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.course_container button:hover {
+  background-color: #e0a733;
+}
+
+/* ========================================= Registeration Section Styling ========================================= */
+.Registeration {
+    /* padding: 60px 40px; */
+}
+.registeration_container {
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.main_registeration_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    word-break: break-word;
+    max-width: 350px;
+    flex: 1;
+}
+.main_registeration_content h1 {
+    font-size: 40px;
+}
+.main_registeration_content h1 .highlighted_Reg {
+    display: inline-block;
+    background-color: var(--primary-color);
+    border: 1px solid black;
+    color: black;
+    font-style: italic;
+    padding: 0px 5px;
+    border-radius: 500px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.main_registeration_content p {
+    color: grey;
+}
+
+i.fa-solid.fa-circle-check {
+    color: green;    
+}
+
+/* Registeration Responsivness */
+
+@media only screen and (max-width: 700px) {
+    .registeration_container {
+        flex-direction: column;
+    }
+
+}
+ 
+@media only screen and (min-width:1067px) {
+    .Register_logo img {
+        width: 500px;
+    }
+}
+
+/* ========================================= Orange Section Styling ========================================= */
+
+.register_container {
+      background: linear-gradient(
+    to bottom,
+    white 50%,           /* Top half (matches section 1) */
+    #fdf6eb 50%          /* Bottom half (matches section 3 beige color) */
+  );
+  padding: 60px 0;
+
+  
+}
+
+.reg_container_card {
+    display: flex;
+    align-items: center;
+    background-color: #FFCA67;
+    margin: auto;
+    max-width: 85%;
+    border-radius: 20px;
+     
+}
+
+.start_order {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    word-break: break-word;
+    max-width: 350px;
+
+}
+
+.start_order h1 {
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.start_order h1 .order_highlight {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+
+}
+
+.start_order p {
+    font-family: sans-serif;
+    font-size: 10px;
+    max-width: 220px;
+    /* margin-top: 20px; */
+}
+.start_order button {
+    background-color: black; /* Black background */
+    color: var(--primary-color);         /* Gold text */
+    border: none;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    max-width: 150px;
+    border-radius: 999px;   /* Pill shape */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.start_order button::after {
+    content: "↗";
+    margin-left: 8px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+}
+
+.start_order button:hover {
+    background-color: #222;
+}
+
+.start_order button:hover::after {
+    transform: translateX(4px); /* Arrow slides right */
+}
+
+/* Orange Section Responsivness */
+
+@media only screen and (min-width: 1000px) {
+
+
+    .reg_container_card {
+        justify-content: space-evenly;
+    }
+
+    .start_order p {
+        font-size: 13px
+    }
+
+    .start_order h1 {
+        font-size: 35px
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .reg_container_card {
+        flex-direction: column;
+    }
+
+    .start_order h1 {
+        font-size: 24px;
+    }
+}
+
+/* ========================================= Mobile Learning Section Styling ========================================= */
+
+.mobile_learning {
+    background-color: #fdf6eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile_learning h1 {
+    font-size: 30px;
+    font-family: sans-serif;
+    max-width: 270px;
+}
+
+.mobile_learning h1 .spotted2 {
+    display: inline-block;
+    background-color: var(--primary-color);
+    border: 1px solid black;
+    color: black;
+    font-style: italic;
+    padding: 0px 5px;
+    border-radius: 500px;
+    font-weight: 200;
+    margin-right: 8px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+}
+
+.store_images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* ========================================= Footer Section Styling ========================================= */
+
+footer {
+    background-color: #fdf6eb;
+    /* color: #fff;
+    padding: 20px 0;
+    text-align: center; */
+}
+
+.footer {
+    margin: auto;
+    max-width: 85%;
+    background-color: #000;
+    color: white;
+    border-radius: 15px 15px 0 0;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.left_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 290px;
+    word-break: break-word;
+}
+
+.left_footer h2 {
+    font-family: "Playfair Display", serif;
+}
+.left_footer p {
+    color: rgb(168, 168, 168);
+}
+
+.right_footer {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.right_footer li {
+    list-style: none;
+    
+}
+.right_footer li a {
+    text-decoration: none;
+    color: rgb(168, 168, 168);
+    font-size: 15px;
+}
+
+.content_middle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 290px;
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 11px;
+    color: rgb(168, 168, 168);
+    margin-top: 30px;
+
+}
+
+@media only screen and (min-width:915px) and (max-width:1200px) {
+    .left_footer p {
+        max-width: 220px;
+    }
+}
+
+
+/* Floating Customize Button on Right */
+#customizeBtn {
+  position: fixed;
+  top: 50%;
+  right: 0;               /* 👈 stick to right */
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 30px 0 0 30px;
+  padding: 15px 8px;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Customizer Panel */
+#customizer {
+  position: fixed;
+  top: 0;
+  right: -300px; /* hidden by default */
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+}
+#customizer.open {
+  right: 0;
+}
+#customizer h2 {
+  margin-top: 0;
+}
+.colors label {
+  display: block;
+  margin: 15px 0;
+}
+
+
+#closeCustomizer {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+#closeCustomizer:hover {
+  color: red;
+}
+
